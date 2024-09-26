@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 
-app.use('/callback', require('./routes/callback'));
-app.use('/async', require('./routes/asyncflow'));
-app.use('/promise', require('./routes/promise'));
+app.use('/callback', require('./callback'));
+app.use('/async', require('./asyncflow'));
+app.use('/promise', require('./promise'));
 
 app.use((req, res) => {
     res.status(404).send('404 - Not Found');
